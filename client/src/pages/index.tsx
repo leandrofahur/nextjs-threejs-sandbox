@@ -19,7 +19,7 @@ const SpinningMesh = ({ position, args, color }: ISpinningBox) => {
   return (
     <mesh castShadow ref={mesh} position={position}>
       <boxBufferGeometry attach="geometry" args={args} />
-      <meshBasicMaterial attach="material" color={color} />
+      <meshStandardMaterial attach="material" color={color} />
     </mesh>
   );
 };
@@ -51,7 +51,7 @@ export default function Home() {
             position={[0, -3, 0]}
           >
             <planeBufferGeometry attach="geometry" args={[100, 100]} />
-            <shadowMaterial attach="material" opacity={0.3} color="#333" />
+            <shadowMaterial attach="material" opacity={0.3} color={'{#666'} />
           </mesh>
         </group>
 
