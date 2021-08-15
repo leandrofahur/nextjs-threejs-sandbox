@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import * as THREE from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { MeshWobbleMaterial } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 
 interface ISpinningBox {
   position: [number, number, number];
@@ -58,6 +58,7 @@ export default function Home() {
         <SpinningMesh position={[0, 1, 0]} args={[3, 2, 1]} color="green" />
         <SpinningMesh position={[-2, 1, -5]} color="blue" />
         <SpinningMesh position={[5, 1, -2]} color="red" />
+        <OrbitControls />
       </Canvas>
     </div>
   );
